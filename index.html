@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Expense Tracker</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+       <div class="container">
+       <form id="transaction-form"> 
+        <h1 class="heading">Expense Tracker</h1>
+        <input type="text" id="title-input" placeholder="Description">
+        <input type="number" id="amount-input" step="0.01" placeholder="Amount">
+        <select id="type-input">
+            <option value="income">Income</option>
+            <option value="expense">Expense</option>
+        </select>
+        <select id="category-input">
+            <option value="food">Food</option>
+            <option value="transportation">Transportation</option>
+            <option value="entertainment">Entertainment</option>
+        </select>
+        <input type="date" id="date-input" name="date">
+        <button type="submit" id="submit-btn">Submit</button>
+        <p id="form-error"></p>
+        </form>
+        </div>
+       
+        <button id="clear-all-btn" type="button">Clear All</button>
+        <section id="summary"></section>
+        <select id="type-filter">
+            <option value="all">All</option>
+            <option value="income">Income</option>
+            <option value="expense">Expense</option>    
+            
+        </select>
+        <ul id="transaction-list"></ul>
+       
+        <script type="module" src="js/main.js"></script>    
+    </body>
+</html>

@@ -1,0 +1,145 @@
+*,*::before,*::after{
+    box-sizing: border-box;
+}
+
+body {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 32px 16px;
+    background-color: beige;
+    color: #382718;
+    font-family: sans-serif;
+}
+
+.container {
+    max-width: 520px;
+    margin: 0 auto 24px;
+    padding: 24px;
+    border: 3px solid brown;
+    border-radius: 10px;
+    background-color: #fffdf7;
+    box-shadow: 4px 5px 8px rgba(89, 7, 7, 0.25);
+}
+
+#transaction-form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.heading {
+    margin: 0 0 8px;
+    color: brown;
+    text-align: center;
+}
+
+#title-input,
+#amount-input,
+#type-input,
+#category-input,
+#date-input,
+#submit-btn,
+#type-filter,
+#clear-all-btn {
+    min-height: 42px;
+    padding: 9px 12px;
+    border: 2px solid brown;
+    border-radius: 6px;
+    background-color: white;
+    color: #24170f;
+    font: inherit;
+}
+
+#submit-btn,
+#clear-all-btn {
+    background-color: brown;
+    color: white;
+    cursor: pointer;
+}
+
+#submit-btn:hover,
+#clear-all-btn:hover,
+#transaction-list button:hover {
+    background-color: #3b1a0c;
+}
+
+#form-error {
+    min-height: 0;
+    margin: 0;
+    padding: 0;
+    color: #8b0000;
+}
+
+#form-error:not(:empty) {
+    min-height: 40px;
+    padding: 9px 12px;
+    border: 2px solid brown;
+    border-radius: 6px;
+    background-color: #fff3e8;
+}
+
+#clear-all-btn,
+#type-filter {
+    margin: 0 8px 16px 0;
+}
+
+#summary {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin: 8px 0 20px;
+}
+
+#summary p {
+    flex: 1 1 180px;
+    margin: 0;
+    padding: 14px;
+    border: 2px solid brown;
+    border-radius: 6px;
+    background-color: #fffdf7;
+    font-weight: bold;
+}
+
+#transaction-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+#transaction-list li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 10px;
+    padding: 12px;
+    border: 2px solid brown;
+    border-radius: 6px;
+    background-color: #fffdf7;
+}
+
+#transaction-list button {
+    flex-shrink: 0;
+    padding: 7px 10px;
+    border: 2px solid brown;
+    border-radius: 6px;
+    background-color: brown;
+    color: white;
+    cursor: pointer;
+    font: inherit;
+}
+
+@media (max-width: 520px) {
+    body {
+        padding: 20px 12px;
+    }
+
+    .container {
+        padding: 18px;
+    }
+
+    #transaction-list li {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+}
